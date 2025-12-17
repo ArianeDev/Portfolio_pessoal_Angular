@@ -11,11 +11,20 @@
     gap: 0.2rem
     height: 10rem
     width: 10rem
-    transition: all .5s ease
+    transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out
 
     i
         font-size: 3.5rem
         color: #751479 
 
 .icons_text-linguagens:hover 
-    transform: scale(1.1)
+    transform: scale(1.001)
+    box-shadow: 6px 6px 6px rgba(143, 143, 143, 0.645)
+
+@media (max-width: 600px)
+    .icons_text-linguagens
+        width: 8rem
+        height: 8rem
+
+        i
+            font-size: 2.5rem

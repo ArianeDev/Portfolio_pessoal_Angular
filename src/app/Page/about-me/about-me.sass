@@ -25,7 +25,7 @@
 .container_linguagens_projetos
     display: flex
     flex-direction: row-reverse
-    height: 100vh
+    height: auto
 
     .container_linguagens, .container_projetos
       display: flex
@@ -65,8 +65,8 @@
             font-size: 3.5rem
             color: #751479 
         
-        :hover 
-          transform: scale(1.1)
+          &:hover 
+            transform: scale(1.1)
 
       .cards_container_projetos
         display: grid
@@ -85,7 +85,7 @@ app-flip-card
     display: flex
     flex-direction: column
     align-items: center
-    height: 100vh
+    height: auto
 
     h2 
         margin: 3rem 0
@@ -97,3 +97,67 @@ app-flip-card
         align-items: center
         gap: 2rem 0
         width: 100%
+
+@media (max-width: 1300px)
+  .container_linguagens_projetos 
+    flex-direction: column-reverse
+    height: auto
+    
+    .container_linguagens, .container_projetos
+      width: 100%
+
+      .container_icons
+        grid-template-columns: 20% 20% 20% 20% 20%
+        width: 60%
+
+      .cards_container_projetos
+        justify-content: center
+        align-items: center
+        grid-template-columns: 50% 50%
+        width: 80%
+
+@media (max-width: 600px)
+  .container_aboutMe
+    flex-direction: column
+
+    .container_text, .container_img
+      width: 100%
+      align-items: center
+      text-align: center
+
+    .container_text
+      margin: 2rem 0
+      gap: 0.5rem
+
+      .first_text
+        font-size: 1.5rem
+
+    .container_img
+      margin-bottom: 2rem
+
+  .container_linguagens_projetos 
+    .container_linguagens, .container_projetos
+
+      .container_icons
+        grid-template-columns: 50% 50%
+        width: 60%
+
+      .cards_container_projetos
+        grid-template-columns: 100%
+        width: 100%
+
+        app-flip-card-project
+          display: flex
+          justify-content: center
+
+  .container_gostos
+    height: auto
+
+    h2 
+      text-align: center
+      width: 90%
+
+    .container_flip-card
+      grid-template-columns: 50% 50%
+      gap: 1rem 1rem
+      width: 90%

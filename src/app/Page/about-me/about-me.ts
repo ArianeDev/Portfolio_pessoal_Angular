@@ -3,10 +3,11 @@ import { FlipCard } from '../../Components/flip-card/flip-card';
 import { CardTecnologias } from '../../Components/card-tecnologias/card-tecnologias';
 import { FlipCardProject } from '../../Components/flip-card_project/flip-card_project';
 import { AnimatedText } from '../../Components/animated-text/animated-text';
+import { Footer } from '../../Components/footer/footer';
 
 @Component({
   selector: 'app-about-me',
-  imports: [FlipCard, FlipCardProject, CardTecnologias, AnimatedText],
+  imports: [FlipCard, FlipCardProject, CardTecnologias, AnimatedText, Footer],
   templateUrl: './about-me.html',
   styleUrl: './about-me.sass'
 })
